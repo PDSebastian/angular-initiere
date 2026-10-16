@@ -1,0 +1,19 @@
+<div class="app">
+  <nav class="menu">
+    <h2>Demo-uri</h2>
+    @for (page of demos; track page.title) {
+      <button [class.active]="page === selected()" (click)="selected.set(page)">
+        {{ page.title }}
+      </button>
+    }
+    <h2>Exerciții</h2>
+    @for (page of exercises; track page.title) {
+      <button [class.active]="page === selected()" (click)="selected.set(page)">
+        {{ page.title }}
+      </button>
+    }
+  </nav>
+  <main class="content">
+    <ng-container *ngComponentOutlet="selected().component" />
+  </main>
+</div>

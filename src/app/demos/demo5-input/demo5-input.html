@@ -1,0 +1,5 @@
+<h1>Input</h1>
+<input #box [value]="name()" (input)="name.set(box.value)" placeholder="Numele tău" />
+<p>Salut, {{ name() }}!</p>
+<p>Ai scris {{ name().length }} caractere.</p>
+<button (click)="name.set('')">Șterge</button>

@@ -1,0 +1,9 @@
+<h1>signal</h1>
+<button (click)="increment()">Apasă {{ x() }}</button>
+<button (click)="incrementLater()">+1 peste 2 secunde</button>
+<button (click)="reset()">Reset</button>
+<p>Dublul: {{ double() }}</p>
+<p class="hint">
+  Un signal anunță singur Angular când se schimbă, așa că și setTimeout actualizează ecranul.
+  computed calculează o valoare din alt signal.
+</p>

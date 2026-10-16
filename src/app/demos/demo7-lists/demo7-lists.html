@@ -1,0 +1,9 @@
+<h1>Liste</h1>
+<p>Total: {{ users.length }} utilizatori</p>
+<ul>
+  @for (user of users; track user.id) {
+    <li>{{ user.name }} — {{ user.age }} ani</li>
+  } @empty {
+    <li>Niciun utilizator</li>
+  }
+</ul>
