@@ -7,11 +7,9 @@ import { Component, computed, signal } from '@angular/core';
 export class Demo4Signal {
   protected readonly x = signal<number>(0);
   protected readonly double = computed<number>(() => this.x() * 2);
-   test:number = 2.5;
 
   protected increment(): void {
     this.x.update((value) => value + 1);
-    this.test++;
   }
 
   protected incrementLater(): void {
