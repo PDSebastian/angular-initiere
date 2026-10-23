@@ -1,5 +1,5 @@
 <h1>Condiții</h1>
-<input #box type="number" [value]="age()" (input)="age.set(box.valueAsNumber)" />
+<input #box type="number" [value]="age()" (input)="age.set(box.valueAsNumber || 0)" />
 @if (age() >= 18) {
   <p>Adult</p>
 } @else {
