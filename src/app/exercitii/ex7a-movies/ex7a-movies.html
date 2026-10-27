@@ -1,1 +1,6 @@
-<p>Exercițiul 7a: de rezolvat</p>
+  <h2>Filme ({{ movies.length }})</h2>
+  <ul>
+    @for (movie of movies; track movie.id) {
+      <li>{{ movie.title }} ({{ movie.year }})</li>
+    }
+  </ul>

@@ -1,1 +1,3 @@
-<p>Exercițiul 5a: de rezolvat</p>
+<input #box [value]="text()" (input)="updateText(box.value)" />
+<p>{{ text().length }} / 50 caractere</p>
+<p>Mai poți scrie {{ remaining() }} caractere.</p>

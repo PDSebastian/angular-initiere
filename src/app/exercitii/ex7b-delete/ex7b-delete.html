@@ -1,1 +1,11 @@
-<p>Exercițiul 7b: de rezolvat</p>
+<h2>Filme ({{ movies().length }})</h2>
+<ul>
+  @for (movie of movies(); track movie.id) {
+    <li>
+      {{ movie.title }} ({{ movie.year }})
+      <button (click)="remove(movie.id)">Șterge</button>
+    </li>
+  } @empty {
+    <p>Niciun film.</p>
+  }
+</ul>

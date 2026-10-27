@@ -1,1 +1,4 @@
-<p>Exercițiul 5b: de rezolvat</p>
+<input #first [value]="firstName()" (input)="updateFirstName(first.value)" />
+<input #last [value]="lastName()" (input)="updateLastName(last.value)" />
+<p>Nume complet: {{ fullName() }}</p>
+<p>Inițiale: {{ initials() }}</p>
